@@ -71,6 +71,7 @@ nav > button {
 
 .active-nav {
   background-color: white;
+  box-shadow: none;
 }
 
 /* MAIN */
@@ -97,6 +98,7 @@ form {
   background-color: var(--paleGray);
   margin: 10px;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .item {
