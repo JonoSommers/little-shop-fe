@@ -6,6 +6,9 @@
   --grayLowOp: #7e6a9b; 
   --teal: #02C3BD;
   --green: #228B22;
+  
+  /* Gradient -> background-image */
+  --greenTealGrad: linear-gradient(to left, #02c3bd, #00b79d, #00a978, #009b50, #228b22);
 } 
 
 * {
@@ -40,6 +43,7 @@ header {
   color: white;
   padding: 15px;
   border: solid 5px white;
+  border-radius: 10px;
   box-shadow: -5px 5px 5px var(--black);
 }
 
