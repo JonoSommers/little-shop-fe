@@ -37,6 +37,10 @@ h2 {
   margin: 0;
 }
 
+p { 
+  text-align: center;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -69,6 +73,12 @@ form {
   display: flex;
 }
 
+#items-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .item,
 .merchant {
   display: flex;
@@ -81,6 +91,7 @@ form {
   width: 30%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .merchant {
@@ -126,5 +137,3 @@ form {
 .hidden {
   display: none;
 } 
-  
-co
