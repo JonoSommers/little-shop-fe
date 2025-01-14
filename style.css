@@ -1,11 +1,19 @@
 /* GENERAL */
- 
+:root {
+  --black: #180626;
+  --gray: #ccc9dc85;
+  --paleGray: #e4e3f4ab;
+  --grayLowOp: #7e6a9b; 
+  --teal: #02C3BD;
+  --green: #228B22;
+} 
+
 * {
   font-family: sans-serif;
 }
 
 body, html {
-  background-color: gray;
+  background-color: var(--gray);
 }
 
 body {
@@ -23,7 +31,7 @@ aside {
 header {
   text-align: center;
   margin: 10px 10px 80px 10px;
-  background-color: black;
+  background-color: var(--black);
   color: white;
   padding: 15px;
 }
@@ -50,7 +58,7 @@ nav {
 nav > button {
   border: none;
   margin-bottom: 20px;
-  background-color: gray;
+  background-color: var(--grayLowOp);
   width: 65%;
   text-align: center;
   border-radius: 10px 0px 0px 10px;
@@ -82,7 +90,7 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: lightgray;
+  background-color: var(--paleGray);
   margin: 10px;
   padding: 5px;
 }
@@ -125,7 +133,7 @@ form {
 }
 
 .success {
-  color: green;
+  color: var(--green);
 }
 
 .fail {
