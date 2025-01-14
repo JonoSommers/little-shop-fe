@@ -34,6 +34,8 @@ header {
   background-color: var(--black);
   color: white;
   padding: 15px;
+  border: solid 5px white;
+  box-shadow: -5px 5px 5px var(--black);
 }
 
 h1 {
