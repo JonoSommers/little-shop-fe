@@ -1,14 +1,15 @@
 /* GENERAL */
 :root {
   --black: #180626;
-  --gray: #ccc9dc85;
-  --paleGray: #e4e3f4ab;
+  --gray: #d7d5e3;
+  --paleGray: #edecf8;
   --grayLowOp: #7e6a9b; 
   --teal: #02C3BD;
-  --green: #228B22;
+  --green: #4e7a61;
+  --red: #721817;
   
   /* Gradient -> background-image */
-  --greenTealGrad: linear-gradient(to left, #02c3bd, #00b79d, #00a978, #009b50, #228b22);
+  --bakcgroundGradient: linear-gradient(to top, #8ddeb0, #63dacb, #47d3e5, #58c9f6, #82bbf9, #88bcfb, #8fbcfd, #95bdff, #74cfff, #53e0ff, #47eeff, #5ffbf1);
 } 
 
 * {
@@ -16,7 +17,8 @@
 }
 
 body, html {
-  background-color: var(--gray);
+  /* background-color: var(--gray); */
+  background-image: var(--bakcgroundGradient);
 }
 
 body {
@@ -72,7 +74,7 @@ nav {
 nav > button {
   border: none;
   margin-bottom: 20px;
-  background-color: var(--grayLowOp);
+  background-color: var(--green);
   width: 65%;
   text-align: center;
   border-radius: 10px 0px 0px 10px;
@@ -135,6 +137,12 @@ form {
   margin-right: 10px;
 }
 
+.edit-merchant,
+.delete-merchant {
+  border-radius: 5px;
+  border: 2px;
+}
+
 .merchant-name {
   padding-left: 10px;
   margin: 0px;
@@ -158,7 +166,7 @@ form {
 }
 
 .fail {
-  color: red;
+  color: var(--red);
 }
 
 /* HIDDEN ELEMENTS */
