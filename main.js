@@ -247,12 +247,10 @@ function filterByMerchant(merchantId) {
 }
 
 function findMerchant(id) {
-  let foundMerchant;
-
-  for (let i = 0; i < merchants.length; i++) {
-    if (parseInt(merchants[i].id) === parseInt(id)) {
-      foundMerchant = merchants[i]
-      return foundMerchant
-    }
-  }
+  var merchantFound = merchants.find((merchant) => {
+    return parseInt(merchant.id) === parseInt(id);
+  });
+  return merchantFound
 }
+
+
