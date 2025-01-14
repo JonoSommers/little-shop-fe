@@ -247,7 +247,9 @@ function filterByMerchant(merchantId) {
 }
 
 function findMerchant(id) {
-  var merchant = merchants.find(element => id)
+  var merchant = merchants.find((element) => {
+    element.id === id.toString();
+  });
   return merchant
   
   // let foundMerchant;
