@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Shop</title>
   </head>
@@ -24,7 +27,7 @@
     <main>
       <section class="display-options">
         <h3>Showing: <span id="showing-text">All Merchants</span></h3>
-        <button id="add-new-button" class="add-new-button" data-state="merchant">+ Add New</button>
+        <button id="add-new-button" class="add-new-button rounded" data-state="merchant">+ Add New</button>
       </section>
       <section id="add-new-options">
         <form id="new-merchant-form" class="hidden">
@@ -40,7 +43,7 @@
           <input id="new-item-description" name="new-item-description" type="text">
           <label for="new-item-price">New Item Price</label>
           <input id="new-item-price" name="new-item-price" type="text">
-          <button id="submit-item" class="submit">Submit</button>
+          <button id="submit-item" class="submit rounded">Submit</button>
         </form>
       </section>
       <section id="merchants-view" class="view">
