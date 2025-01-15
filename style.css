@@ -1,11 +1,12 @@
 /* GENERAL */
 :root {
-  --black: #222222;
-  --teal: #9ac6c4;
-  --green: #4e7a61;
-  --red: #bd2a28;
-  --purple: #945fb2; 
-  --pink: #ffd3e8;
+  --shadow: #222222;
+  --background: #BBD0FF;
+  --item: #C8B6FF; 
+  --view:   #FFD6FF;
+  --notActive: #E7C6FF;
+  --success: #4e7a61;
+  --fail: #bd2a28;
   
   /* Gradient -> background-image */
   /* --backgroundGradient: linear-gradient(to top, #8ddeb0, #63dacb, #47d3e5, #58c9f6, #82bbf9, #88bcfb, #8fbcfd, #95bdff, #74cfff, #53e0ff, #47eeff, #5ffbf1); */} 
@@ -15,7 +16,7 @@
 }
 
 body, html {
-  background-color: var(--teal);
+  background-color: var(--background);
   /* background-image: var(--backgroundGradient); */
 }
 
@@ -25,7 +26,7 @@ body {
 }
 
 button {
-  box-shadow: -2px 2px 2px var(--black);
+  box-shadow: -2px 2px 2px var(--shadow);
   border-radius: 10px;
 }
 
@@ -38,18 +39,18 @@ button:hover {
 aside {
   width: 25%;
   margin: none;
-  box-shadow: -5px 0px 5px var(--black) inset;
+  box-shadow: -5px 0px 5px var(--shadow) inset;
 }
 
 header {
   text-align: center;
   margin: 10px 10px 80px 10px;
-  background-color: var(--black);
+  background-color: var(--shadow);
   color: white;
   padding: 15px;
   border: solid 5px white;
   border-radius: 10px;
-  box-shadow: -5px 5px 5px var(--black);
+  box-shadow: -5px 5px 5px var(--shadow);
   position: relative;
   z-index: 0;
   user-select: none;
@@ -103,7 +104,7 @@ header:after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: var(--shadow);
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -124,7 +125,11 @@ h2 {
 }
 
 h3 {
-  /* color: white; */
+  color: var(--shadow);
+}
+
+.display-options > h3 {
+  color: var(--shadow);
 }
 
 p { 
@@ -140,17 +145,17 @@ nav {
 nav > button {
   border: none;
   margin-bottom: 20px;
-  background-color: var(--black);
+  background-color: var(--notActive);
   width: 65%;
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
-  box-shadow: -5px 0px 5px var(--black) inset;
-  color: white;
+  box-shadow: -5px 0px 5px var(--shadow) inset;
+  color: var(--shadow);
 }
 
 .active-nav {
-  background-color: var(--pink);
+  background-color: var(--view);
   box-shadow: none;
 }
 
@@ -159,7 +164,7 @@ nav > button {
 main {
   padding: 10px;
   width: 75%;
-  background-color: var(--pink);
+  background-color: var(--view);
 }
 
 form {
@@ -175,7 +180,7 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: var(--purple);
+  background-color: var(--item);
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
@@ -211,7 +216,7 @@ form {
 .edit-merchant,
 .delete-merchant {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--shadow);
   
 }
 
@@ -234,11 +239,11 @@ form {
 }
 
 .success {
-  color: var(--green);
+  color: var(--success);
 }
 
 .fail {
-  color: var(--red);
+  color: var(--fail);
 }
 
 /* HIDDEN ELEMENTS */
@@ -246,3 +251,8 @@ form {
 .hidden {
   display: none;
 } 
+
+
+
+
+
