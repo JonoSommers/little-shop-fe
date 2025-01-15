@@ -154,6 +154,12 @@ function showMerchantItemsView(id, items) {
 // Functions that add data to the DOM
 function displayItems(items) {
   itemsView.innerHTML = ''
+
+  if (items.length === 0) {
+    itemsView.innerHTML = `<p class="fail">No Items Yet For This Merchant</p>`;
+    return;
+  }
+
   let firstHundredItems = items.slice(0, 99)
   firstHundredItems.forEach(item => {
     let merchant = findMerchant(item.attributes.merchant_id).attributes.name
@@ -235,14 +241,10 @@ function addRemoveActiveNav(nav1, nav2) {
 }
 
 function filterByMerchant(merchantId) {
-  const specificMerchantItems = []
-
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-      specificMerchantItems.push(items[i])
-    }
-  }
-
+  var specificMerchantItems = items.filter((item) => {
+    return item.attributes.merchant_id === parseInt(merchantId);
+  })
+  
   return specificMerchantItems
 }
 
