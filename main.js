@@ -196,10 +196,10 @@ function displayAddedMerchant(merchant) {
       `<article class="merchant" id="merchant-${merchant.id}">
           <h3 class="merchant-name">${merchant.attributes.name}</h3>
           <div>
-            <button class="view-merchant-items">View Merchant Items</button>
+            <button class="view-merchant-items rounded">View Merchant Items</button>
             <button class="edit-merchant icon">✎</button>
             <input class="edit-merchant-input hidden" name="edit-merchant" type="text">
-            <button class="submit-merchant-edits hidden">
+            <button class="submit-merchant-edits rounded hidden">
               Submit Edits
             </button>
             <button class="discard-merchant-edits hidden">
