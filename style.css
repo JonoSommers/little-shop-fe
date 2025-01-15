@@ -1,12 +1,24 @@
 /* GENERAL */
-/* * { border: 1px solid red; } */
+:root {
+  --black: #180626;
+  --gray: #d7d5e3;
+  --paleGray: #edecf8;
+  --grayLowOp: #7e6a9b; 
+  --teal: #02C3BD;
+  --green: #4e7a61;
+  --red: #721817;
+  
+  /* Gradient -> background-image */
+  --bakcgroundGradient: linear-gradient(to top, #8ddeb0, #63dacb, #47d3e5, #58c9f6, #82bbf9, #88bcfb, #8fbcfd, #95bdff, #74cfff, #53e0ff, #47eeff, #5ffbf1);
+} 
 
 * {
   font-family: sans-serif;
 }
 
 body, html {
-  background-color: gray;
+  /* background-color: var(--gray); */
+  background-image: var(--bakcgroundGradient);
 }
 
 body {
@@ -23,15 +35,18 @@ button:hover {
 aside {
   width: 25%;
   margin: none;
+  box-shadow: -5px 0px 5px var(--black) inset;
 }
 
 header {
   text-align: center;
   margin: 10px 10px 80px 10px;
-  background-color: black;
+  background-color: var(--black);
   color: white;
   padding: 15px;
-  border-radius: 20px;
+  border: solid 5px white;
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px var(--black);
 }
 
 h1 {
@@ -59,15 +74,17 @@ nav {
 nav > button {
   border: none;
   margin-bottom: 20px;
-  background-color: white;
-  width: 75%;
+  background-color: var(--green);
+  width: 65%;
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
+  box-shadow: -5px 0px 5px var(--black) inset;
 }
 
 .active-nav {
   background-color: white;
+  box-shadow: none;
 }
 
 /* MAIN */
@@ -91,9 +108,10 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: lightgray;
+  background-color: var(--paleGray);
   margin: 10px;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .item {
@@ -119,6 +137,12 @@ form {
   margin-right: 10px;
 }
 
+.edit-merchant,
+.delete-merchant {
+  border-radius: 5px;
+  border: 2px;
+}
+
 .merchant-name {
   padding-left: 10px;
   margin: 0px;
@@ -138,15 +162,14 @@ form {
 }
 
 .success {
-  color: green;
+  color: var(--green);
 }
 
 .fail {
-  color: red;
+  color: var(--red);
 }
 
 /* HIDDEN ELEMENTS */
 
 .hidden {
   display: none;
-} 
